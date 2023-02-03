@@ -7,7 +7,7 @@ Capstone Project for Deloitte AI Academy
 
 It is relatively common knowledge that cardiovascular disease is the leading cause of mortality worldwide, accounting for more than 17M deaths annually. Thus, it is clearly important to explore the significance of symptoms, health factors, and other indicators as they relate to heart disease. Trained algorithms would be able to help doctors identify patterns in large amounts of data, which can improve accuracy and timeliness of diagnoses. In addition, it would decrease pressure on medical professionals and have some positive effect on the cost, efficiency, and price of medical treatment. This project uses patient data such as heart rate, age, sex, and other cardiovascular indicators to train supervised classification models, the best of which predict heart disease diagnosis with ~87% accuracy.
 
-We would like to note that the data for this project was sourced from the UCI Machine Learning Repository, linked [here](https://archive.ics.uci.edu/ml/index.php).
+I would like to note that the data for this project was sourced from the UCI Machine Learning Repository, linked [here](https://archive.ics.uci.edu/ml/index.php).
 
 ## Establishing an Understanding of the Problem
 ### Risk-Factors of Cardiovascular Disease
@@ -16,7 +16,7 @@ Making an effort to understand the problem is extremely helpful in creating accu
 There is a significant amount of literature that discusses thalassemia being a high-risk indicator of heart disease. For example, a 1989 research study of 1087 thalassemia patients found that 64% of the death rate could be attributed to cardiovascular disease. [[3]](https://www.sciencedirect.com/science/article/pii/S014067368990264X) In addition, a risk assessment of cardiovascular disease conducted by Björn Dahlöf cited "hypertension" and "high levels of cholesterol" as important indicators of cardiovascular disease worldwide. [[4]](https://www.sciencedirect.com/science/article/pii/S0002914909024825) Based on this research, predicting that thalassemia, cholesterol, and resting blood pressure will have the highest effect on accurate diagnoses is a viable initial hypothesis. 
 
 ### Exploratory Data Analysis
-The exploratory data analysis performed involved a substantial amount of visualization. The data was split into training and testing first to avoid biases during analysis. We first wished to determine the shape of the data for each feature as it related to the target to gather some intuition as to what features may potentially be important. In addition, any required data transformations would be apparent. We generated the following histograms, one for each feature...
+The exploratory data analysis performed involved a substantial amount of visualization. The data was split into training and testing first to avoid biases during analysis. We first wished to determine the shape of the data for each feature as it related to the target to gather some intuition as to what features may potentially be important. In addition, any required data transformations would be apparent. I generated the following histograms, one for each feature...
 
 ![Histogram](images/EDAHist.png)
 
