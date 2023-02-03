@@ -24,7 +24,7 @@ Immediately, it can be seen that there were several quantitative features that w
    
 ![Statistics](images/stats.png)
 
-In particular, the skew and kurtosis of the quantitative features in the dataset were interesting. Notice that resting blood pressure, cholesterol, and old peak were all relatively skewed compared to the other features. To combat this, we designed a feature engineering algorithm that normalized the data using various statistical methods. This included handling outliers in different ways, which can be visualized in the figures below. The first set of 
+In particular, the skew and kurtosis of the quantitative features in the dataset were interesting. Notice that resting blood pressure, cholesterol, and old peak were all relatively skewed compared to the other features. To combat this, I designed a feature engineering algorithm that normalized the data using various statistical methods. This included handling outliers in different ways, which can be visualized in the figures below. The first set of 
 Another way to handle the skew and kurtosis was to check for outliers in the data. To do this, I graphed several boxplots. For the first set of only the frequency was graphed. For the second set of boxplots, the data was separated among the target label and then graphed. 
 
 ![First Boxplot Set](images/countbox.png)
@@ -40,14 +40,14 @@ This visualization was especially surprising because there was only one distinct
 The Gradient Boosting Classifier model from 
 [Sci-Kit Learn](https://scikitlearn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html) was chosen because of its parameter flexibility and predictive accuracy. There are several hyperparameters that the user is able to tune such that these parameters are assigned the most optimal settings. To train this model, the outliers were first removed. Initially, the GBC algorithm was executed with default parameters to establish a baseline. Next, to create the final model, a hyperparameterization technique was executed to increase the accuracy metrics of the model. 
 
-To conduct this hyperparameterization, we used GridSearchCV, which (by default) uses 5-fold cross validation when training the model.
+To conduct this hyperparameterization, I used GridSearchCV, which (by default) uses 5-fold cross validation when training the model.
 The parameters varied were max_depth, min_samples_split, and n_estimators. When the best estimator of these varying parameters was extracted, the maximum depth optimal value was 3, the minimum split samples optimal value was 6, and the number of estimators optimal value was 10.
 
 On the test set, the baseline gradient boosting classifier had an accuracy of 0.80, an AUC of 0.913, an f1 score of 0.76, and a sparsity of 0. After the training algorithm and model was tested, the trained model had an accuracy of 0.87, an AUC of 0.93, an f1 score of 0.82, and a sparsity of 0.231. Clearly, the trained model outperformed the baseline GDC in every metric.
 
-We note here that our models outperformed literature baselines by a significant amount, but this may be because of inconsistencies and unavailability of medical data for those particular datasets. For this reason, we chose to establish an internal baseline.
+Note here that our models outperformed literature baselines by a significant amount, but this may be because of inconsistencies and unavailability of medical data for those particular datasets. For this reason, I chose to establish an internal baseline.
 
-In addition to the scoring metrics, we also visualized the coefficient weights attributed to each feature in the final model. The following plot was produced...
+In addition to the scoring metrics, I also visualized the coefficient weights attributed to each feature in the final model. The following plot was produced...
 
 ![Feature Weights](images/feature_importance.png)
 
@@ -57,7 +57,7 @@ We can see that the most significant cardiovascular-risk indicators were thalass
 ## Conclusion
 Based on the methods implemented in this data analysis project, a trained and hyperparameter-tuned gradient boosting classifier can achieve ~87% accuracy, which is 7 percentage points greater than the baseline values. This, of course, does rely on some in-house feature engineering and relatively organized and refined data. The feature coefficients of the trained model suggest that thalassemia, number of flouroscopy colored vessels, and degree of chest pain were the most significant indicators of heart disease diagnosis, in decreasing order. 
 
-As for use of the models described in this project, it is not completely clear at the conclusion of this study that the model is generalizable to real-world, unrefined patient data. There may be other important factors that are more deterministic of a heart disease diagnosis and the model may not consider other important factors. For this reason, we advise against using this model with no supervision. However, it can be used to help doctors identify patterns in large sets of patient data and may help doctors prepare in advance for certain patient profiles to have heart disease. In short, this model should be treated as an extremely efficient assistant that still needs an expert to monitor the results it outputs.
+As for use of the models described in this project, it is not completely clear at the conclusion of this study that the model is generalizable to real-world, unrefined patient data. There may be other important factors that are more deterministic of a heart disease diagnosis and the model may not consider other important factors. For this reason, I advise against using this model with no supervision. However, it can be used to help doctors identify patterns in large sets of patient data and may help doctors prepare in advance for certain patient profiles to have heart disease. In short, this model should be treated as an extremely efficient assistant that still needs an expert to monitor the results it outputs.
 
 ## Repository Navigation
 
@@ -68,7 +68,7 @@ The repository has a relatively simple organization and contains the following c
 - README.md
 - requirements.txt
 
-It should not be difficult to reproduce the results of this study. For clarity and ease of reproduction, we note that we used Google Colab as Python notebook editor on a Safari browser on MacOS. The only package requirement is sci-kit learn, which can be installed in Google Colab with the command "!pip install -U scikit-learn", which is included in the final notebook. Of course, a working version of Python3 is also required. The dataset used in this study is publicly available for use at the UCI Machine Learning Repository and is linked [here](https://archive.ics.uci.edu/ml/datasets/heart+disease).  
+It should not be difficult to reproduce the results of this study. For clarity and ease of reproduction, note that I used Google Colab as Python notebook editor on a Safari browser on MacOS. The only package requirement is sci-kit learn, which can be installed in Google Colab with the command "!pip install -U scikit-learn", which is included in the final notebook. Of course, a working version of Python3 is also required. The dataset used in this study is publicly available for use at the UCI Machine Learning Repository and is linked [here](https://archive.ics.uci.edu/ml/datasets/heart+disease).  
 
 ### Final Links
 [Final Notebook](/CapstoneFinalProject.ipynb)
