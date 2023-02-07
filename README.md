@@ -71,6 +71,6 @@ The repository has a relatively simple organization and contains the following c
 It should not be difficult to reproduce the results of this study. For clarity and ease of reproduction, note that I used Google Colab as Python notebook editor on a Safari browser on MacOS. The only package requirement is sci-kit learn, which can be installed in Google Colab with the command "!pip install -U scikit-learn", which is included in the final notebook. Of course, a working version of Python3 is also required. The dataset used in this study is publicly available for use at the UCI Machine Learning Repository and is linked [here](https://archive.ics.uci.edu/ml/datasets/heart+disease).  
 
 ### Final Links
-[Final Notebook](/CapstoneFinalProject.ipynb)
-[Final Presentation](/_____)
+[Final Notebook](/PredictingHeartDiseaseTarget.ipynb)
+[Final Presentation](/AI Academy Capstone.pdf)
 
