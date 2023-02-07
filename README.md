@@ -72,5 +72,5 @@ It should not be difficult to reproduce the results of this study. For clarity a
 
 ### Final Links
 [Final Notebook](/PredictingHeartDiseaseTarget.ipynb)
-[Final Presentation](/AI Academy Capstone.pdf)
+[Final Presentation](/AIAcademyCapstone.pdf)
 
